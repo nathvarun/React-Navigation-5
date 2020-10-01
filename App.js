@@ -20,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
   });
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>HomeScreen</Text>
+      <Text style={{ color: isFocused ? "#74B9FF" : "#121212" }}>HomeScreen</Text>
       <Button
         title="Go To Settings Screen"
         onPress={() => navigation.navigate("Settings")}
@@ -32,10 +32,10 @@ const SettingsScreen = ({ navigation }) => {
   const isFocused = useIsFocused();
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text style={{ color: isFocused ? "green" : "black" }}>
+      <Text style={{ color: isFocused ? "#74B9FF" : "#121212" }}>
         SettingsScreen
       </Text>
-      <Button title="Go To Home Screen" onPress={() => navigation.goBack()} />
+      <Button title="Go Back To Home Screen" onPress={() => navigation.goBack()} />
     </View>
   );
 };
@@ -57,7 +57,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#EAF0F1",
     alignItems: "center",
     justifyContent: "center"
   }
